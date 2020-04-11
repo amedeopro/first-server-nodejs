@@ -19,7 +19,7 @@ exports.getPosts = (req,res,next) => {
 
 exports.getPostsByMe = (req,res,next) => {
  req.user.getPosts()
-    .then((posts) => {
+ .then((posts) => {
         res.json({posts: posts})
     })
     .catch(

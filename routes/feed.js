@@ -14,7 +14,6 @@ router.get('/posts/user/me', feedController.getPostsByMe);
 router.get('/posts/search', feedController.searchPost);
 router.get('/posts/:id', feedController.getPost);
 router.put('/posts/:id', feedController.editPost);
-router.put('/posts/:id', feedController.editPost);
 
 //GET /feed/post/:id
 //PUT /feed/post/:id

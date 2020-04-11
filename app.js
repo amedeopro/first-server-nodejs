@@ -45,7 +45,7 @@ sequelize.authenticate().then(rec => {
     console.log('Connessione stabilita con successo')
     // il force: true cancella tutto il contenuto della tabella post quindi bisogna far attenzione nel caso nella tabella ci siano già dati
     // sequelize.sync({force: true})
-    sequelize.sync()
+    sequelize.sync({force : true})
     .then((result) => {
         return User.findByPk(1);
     })
