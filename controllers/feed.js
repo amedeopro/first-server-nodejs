@@ -17,6 +17,16 @@ exports.getPosts = (req,res,next) => {
         );
 };
 
+exports.getPostsByMe = (req,res,next) => {
+ req.user.getPosts()
+    .then((posts) => {
+        res.json({posts: posts})
+    })
+    .catch(
+        error => console.log(error)
+        );
+};
+
 exports.getPost = (req,res,next) => {
     const postId = req.params.id
     Post.findByPk(postId)

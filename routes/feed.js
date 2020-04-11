@@ -10,6 +10,7 @@ const feedController = require('../controllers/feed');
 
 //GET ALL /feed/posts
 router.get('/posts', feedController.getPosts);
+router.get('/posts/user/me', feedController.getPostsByMe);
 router.get('/posts/search', feedController.searchPost);
 router.get('/posts/:id', feedController.getPost);
 router.put('/posts/:id', feedController.editPost);
